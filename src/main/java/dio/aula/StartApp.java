@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 
 @Component  // Obrigatorio informar essa anotação para dizer que é um objeto gerenciado pelo Spring
 public class StartApp implements CommandLineRunner {
-    @Autowired                          // Para criar a injeção
-    private UserRepository repository;  // Injetando o repositorio
+    @Autowired                                  // Para criar a injeção
+    private UserRepository repository;          // Injetando o repositorio
     @Override
     public void run(String... args) throws Exception {
         User user = new User();
@@ -17,7 +17,11 @@ public class StartApp implements CommandLineRunner {
         user.setUsername("arijunior09");
         user.setPassword("arijr123");
 
-        repository.save(user);
+        repository.save(user);    // Salvando o usuario no repositorio
+
+        for(User u: repository.findAll()){  // Para cada usuario encontrar todos
+            System.out.println(u);          // Imprima na tela os usuarios
+        }
 
     }
 }
