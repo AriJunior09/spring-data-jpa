@@ -9,5 +9,6 @@ public class SpringDataJpaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringDataJpaApplication.class, args);
 	}
-
+	// Não posso colocar as intruções aqui, preciso criar uma classe tipo App
+	// Para implementar o CommandLineRunner.
 }
