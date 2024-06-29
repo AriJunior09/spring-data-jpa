@@ -3,6 +3,7 @@ package dio.aula.model;
 import jakarta.persistence.*;
 
 @Entity     // Toda aplicação que usa JPA e tem entidades precisa dessa anotação
+@Table(name = "users") // Especifique o nome da tabela aqui
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
